@@ -21,7 +21,6 @@ The goals / steps of this project are the following:
 [image6]: ./custom/ped.jpg "Pedestrian"
 [image7]: ./custom/rt.jpg "Right Turn"
 [image8]: ./custom/stop.jpg "STOP"
-grayscale
 ## Rubric Points
 ### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
 
@@ -87,15 +86,15 @@ To train the model, I computed cross entropy of the logits and used Adam Optimiz
 
 My final model results were:
 * training set accuracy of 100 %
-* validation set accuracy of 93.4 % 
-* test set accuracy of 91.9 %
+* validation set accuracy of 93.6 % 
+* test set accuracy of 91.0 %
 
 
 If a well known architecture was chosen:
 * What architecture was chosen?
  LeNet architecture was used 
 * Why did you believe it would be relevant to the traffic sign application?
-LeNet architecture was used earlier to identify Digits in MNIST dataset. The architecture to identify shapes , patterns decently. Identifying a Traffic sign would also need the model to identify the shapes and patterns . Therefore I believed LeNet would be a great start. Although a small modification in the architecture had to be made to improve accuracy. I removed the first Max pooling layer as I felt that most of the information about the image is getting lost due to it. Removing the Max pool layer improved accuracy from 88.89 % to 93.4%
+LeNet architecture was used earlier to identify Digits in MNIST dataset. The architecture to identify shapes , patterns decently. Identifying a Traffic sign would also need the model to identify the shapes and patterns . Therefore I believed LeNet would be a great start. Although a small modification in the architecture had to be made to improve accuracy. I removed the first Max pooling layer as I felt that most of the information about the image is getting lost due to it. Removing the Max pool layer improved accuracy from 88.89 % to 93.6%
 * How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well?
  The accuracy of the training and validation test sets were almost the same, which provides an evidence that the model is well trained and works for untrained scenarios.
 
@@ -123,23 +122,24 @@ Here are the results of the prediction:
 | STOP			| STOP										|
 
 
-The model was able to correctly guess 5 of the 5 traffic signs, which gives an accuracy of 100%. This compares favorably to the accuracy on the test set of 91.9%
+The model was able to correctly guess 5 of the 5 traffic signs, which gives an accuracy of 100%. This compares favorably to the accuracy on the test set of 91.0%
 
 #### 3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| Speed limit 30    		| 1						| 
-| Speed limit 70     			| 0.63								|
-| Pedestrain | 0.999|
+| Speed limit 30    		|0.999 |
+| Speed limit 70     			| 0.996				|
+| Pedestrain | 0.997
 | Right Turn Ahead | 0.997|
 | STOP			| 0.84									|
 
 
 
 
-For the first image, the model is highly sure that this is a Speed limit 30 Sign (probability of 1), and the image does contain a Speed limit 30 Sign. The top five soft max probabilities were [  1.00000000e+00,   9.45942970e-17,   1.06105948e-17, 5.07008272e-20,   4.94053654e-21]
+For the first image, the model is highly sure that this is a Speed limit 30 Sign (probability of 0.999), and the image does contain a Speed limit 30 Sign. The top five soft max probabilities were [  9.99999404e-01,   5.48235050e-07,   1.97941774e-09,
+6.22901342e-10,   6.40649686e-11]
 
-For the second image , the model is relatively sure that it is a Speed limit 70 Sign. The top 5 softmax probabilities were [6.35294735e-01,   3.64679933e-01,   2.54013794e-05, 1.18109176e-08,   6.93225642e-13] corresponding to the indices of [ 4,  1,  0, 39, 37]. This implies that the model was confused in digits classification as the top 3 were having more probability and the corresponding labels were Speed limit (70km/h),Speed limit (30km/h), Speed limit (20km/h) respectively
+For the second image , the model is relatively sure that it is a Speed limit 70 Sign. The top 5 softmax probabilities were [  9.96378720e-01,   3.62128625e-03,   1.67706864e-12, 1.32435329e-14,   3.04944203e-17]]corresponding to the indices of [ 4,  1,  0, 39, 37]. This implies that the model was confused in digits classification as the top 3 were having more probability and the corresponding labels were Speed limit (70km/h),Speed limit (30km/h), Speed limit (20km/h) respectively
 
 
