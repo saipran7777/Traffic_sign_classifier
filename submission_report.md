@@ -16,11 +16,11 @@ The goals / steps of this project are the following:
 [image1]: ./examples/visualization.jpg "Visualization"
 [image2]: ./custom/gray.png "Grayscaling"
 [image3]: ./examples/random_noise.jpg "Random Noise"
-[image4]: ./custom/30.jpg =50x50  "Speed limit 30"
-[image5]: ./custom/70.jpg =50x50 "Speed limit 70"
-[image6]: ./custom/ped.jpg =50x50 "Pedestrian"
-[image7]: ./custom/rt.jpg =50x50 "Right Turn"
-[image8]: ./custom/stop.jpg =50x50 "STOP"
+[image4]: ./custom/30.jpg  "Speed limit 30"
+[image5]: ./custom/70.jpg "Speed limit 70"
+[image6]: ./custom/ped.jpg "Pedestrian"
+[image7]: ./custom/rt.jpg "Right Turn"
+[image8]: ./custom/stop.jpg "STOP"
 [image9]: prop.png "Vizualization"
 ## Rubric Points
 ### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
