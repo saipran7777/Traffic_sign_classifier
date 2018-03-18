@@ -21,6 +21,7 @@ The goals / steps of this project are the following:
 [image6]: ./custom/ped.jpg "Pedestrian"
 [image7]: ./custom/rt.jpg "Right Turn"
 [image8]: ./custom/stop.jpg "STOP"
+[image9]: prop.png "Vizualization"
 ## Rubric Points
 ### Here I will consider the [rubric points](https://review.udacity.com/#!/rubrics/481/view) individually and describe how I addressed each point in my implementation.  
 
@@ -43,7 +44,9 @@ I used the in-built len() function to find the size of training, validation and 
 * The number of unique classes/labels in the data set is 43
 
 #### 2. Include an exploratory visualization of the dataset.
-In exploratory visuzlization of dataset, I used pandas to get the frequency of each label. The highest and lowest frequency were '2010' and '180' corresponding to the labels '2' and ('19','37','0'). Taking a random index, I have also checked if the mapping between X_train and y_train is correct and that their lengths are equal
+In exploratory visuzlization of dataset, I used pandas to get the frequency of each label. The highest and lowest frequency were '2010' and '180' corresponding to the labels '2' and ('19','37','0'). Taking a random index, I have also checked if the mapping between X_train and y_train is correct and that their lengths are equal. The following image shows the frequency table of all classes among train, test and validation datasets
+
+![alt text][image9]
 
 ### Design and Test a Model Architecture
 
@@ -86,8 +89,8 @@ To train the model, I computed cross entropy of the logits and used Adam Optimiz
 
 My final model results were:
 * training set accuracy of 100 %
-* validation set accuracy of 93.6 % 
-* test set accuracy of 91.0 %
+* validation set accuracy of 93.7 % 
+* test set accuracy of 90.7 %
 
 
 If a well known architecture was chosen:
@@ -132,7 +135,7 @@ The model was able to correctly guess 5 of the 5 traffic signs, which gives an a
 | Speed limit 70     			| 0.996				|
 | Pedestrain | 0.997
 | Right Turn Ahead | 0.997|
-| STOP			| 0.84									|
+| STOP			| 0.994									|
 
 
 
